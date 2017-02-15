@@ -12,4 +12,4 @@ Content
 
 See also descriptions at the head of each script.
 
-* aci-raw2pretty.sh - helps convert raw bunch of JSON configuration backup into corresponding numered files in flat directory suitable for subsequent version control with GIT or Mercurial, etc.
+* aci-raw2pretty.sh - helps to convert raw bunch of JSON configuration backup into corresponding numered files in flat directory suitable for subsequent version control with GIT or Mercurial, etc.
