@@ -5,10 +5,12 @@
 if [ -d $1 ]; then
 	find $1 -name \*.json -not -name \*_pretty.json -type f | aci-filename-map.awk | sh -c '
 		#echo Begin processing ...
-		while read from to; do
+		while [ $? -eq 0 ]  && read from to; do
 			#echo processing $from ... 1>&2
 			#echo -n .
-			json-pretty.py < $from > ${0:-.}/${to}_pretty.json
+			jq -a --tab '.' < $from > ${0:-.}/${to}_pretty.json 2>/dev/null || # fallback to my butifier
+                        json-pretty.py < $from | unexpand -t 4 > ${0:-.}/${to}_pretty.json 
+                        # you may allways use ``| expand -t 4`` to set desirable indentation depth
 		done
 		#echo Done
 	' "$2"
