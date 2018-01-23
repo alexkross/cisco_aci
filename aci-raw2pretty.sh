@@ -31,9 +31,9 @@ if [[ $RES -eq 0 ]]; then
   fi
 	#rm -i $DEST # for some precautionary interactivity
   if (( ACI_NO_SEC )); then
-    aci-no-sec.sh ${TS}_pretty/config_001.json | expand -t 2 > $DEST
+    aci-no-sec.sh ${TS}_pretty/config_001.json | expand -t 1 > $DEST
   else
-    expand -t 2 ${TS}_pretty/config_001.json > $DEST
+    expand -t 1 ${TS}_pretty/config_001.json > $DEST
   fi
   echo Check the result in $DEST, then remove clutter in ${TS}_* !!!
   #cd $(dirname $DEST)
