@@ -29,9 +29,9 @@ TARGET=config.json
 if [[ $RES -eq 0 ]]; then
 	#rm -i $TARGET
   if (( ACI_NO_SEC )); then
-    aci-no-sec.sh ${TS}/config/config_001_pretty.json > ${TARGET}
+    aci-no-sec.sh ${TS}/config/config_001_pretty.json | expand -t 2 > ${TARGET}
   else
-    cp -i ${TS}/config/config_001_pretty.json $TARGET
+    expand -t 2 ${TS}/config/config_001_pretty.json > $TARGET
   fi
 	if [[ -d .git ]]; then
 		git add -fA $TARGET
