@@ -3,7 +3,7 @@
 # Parameters: <exported_aci_config.tar.gz> [<dest_config_file.json>]
 set -e
 if [[ -f $1 ]]; then
-  TS=$(echo $1 | sed -ne 's/ce2_.*-\(20..-..-..*\).tar.gz/\1/p') # 'T..-..-..' part of the regex is optional, because this date may be supplied manually.
+  TS=$(echo $1 | sed -ne 's/ce2_.*-\(20..-..-..T..-..-..\).tar.gz/\1/p')
 	mkdir -p ${TS}_{raw,pretty} && tar -xzf $1 -C ${TS}_raw
 	find ${TS}_raw -name \*.json | aci-filename-map.awk | sh -c '
 		while [[ $? -eq 0 ]] && read from to; do
