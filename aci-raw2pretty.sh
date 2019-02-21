@@ -14,7 +14,7 @@ if [[ -f $1 ]]; then
 	' "${TS}_pretty" # ToDo: rewrite using plain for loop
 	RES=$?
 else
-	echo 'Bad source path to the exported ACI fabrick configuration file (ce*.tar.gz)' 1>&2
+	echo 'Bad source path to the exported ACI fabric configuration file (ce*.tar.gz)' 1>&2
 	exit 1
 fi
 set +e
