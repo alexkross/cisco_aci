@@ -5,7 +5,7 @@ set -e
 if [[ -f $1 ]]; then
   TS=$(echo $1 | sed -ne 's/ce2_.*-\(20..-..-..T..-..-..\).tar.gz/\1/p')
 	mkdir -p ${TS}_{raw,pretty} && tar -xzf $1 -C ${TS}_raw
-	find ${TS}_raw -name \*.json | aci-filename-map.awk | sh -c '
+	find ${TS}_raw -name \*.json | sed -r 's/([[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2})T([[:digit:]]{2}-[[:digit:]]{2}-[[:digit:]]{2})/\1:\2/g' | aci-filename-map.awk | sh -c '
 		while [[ $? -eq 0 ]] && read from to; do
 			jq -a --tab '.' < $from > ${0}/${to}.json 2>/dev/null || # fallback to my butifier
                         json-pretty.py < $from | unexpand -t 4 > ${0}/${to}.json 
