@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 # Created by https://www.gitignore.io/api/git,linux,pydev,python,windows,pycharm+all,jupyternotebook,vim,webstorm,emacs,dotenv
 # Edit at https://www.gitignore.io/?templates=git,linux,pydev,python,windows,pycharm+all,jupyternotebook,vim,webstorm,emacs,dotenv
 
@@ -190,15 +187,8 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-<<<<<<< HEAD
-env/
 build/
 develop-eggs/
-dist/
-=======
-build/
-develop-eggs/
->>>>>>> upstream/master
 downloads/
 eggs/
 .eggs/
@@ -207,11 +197,6 @@ lib64/
 parts/
 sdist/
 var/
-<<<<<<< HEAD
-*.egg-info/
-.installed.cfg
-*.egg
-=======
 wheels/
 pip-wheel-metadata/
 share/python-wheels/
@@ -219,7 +204,6 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
->>>>>>> upstream/master
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -234,39 +218,19 @@ pip-delete-this-directory.txt
 # Unit test / coverage reports
 htmlcov/
 .tox/
-<<<<<<< HEAD
-=======
-.nox/
->>>>>>> upstream/master
 .coverage
 .coverage.*
 .cache
 nosetests.xml
 coverage.xml
-<<<<<<< HEAD
-*,cover
-.hypothesis/
-=======
 *.cover
 .hypothesis/
 .pytest_cache/
->>>>>>> upstream/master
 
 # Translations
 *.mo
 *.pot
 
-<<<<<<< HEAD
-# Django stuff:
-*.log
-local_settings.py
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-=======
->>>>>>> upstream/master
 # Scrapy stuff:
 .scrapy
 
@@ -276,29 +240,6 @@ docs/_build/
 # PyBuilder
 target/
 
-<<<<<<< HEAD
-# IPython Notebook
-.ipynb_checkpoints
-
-# pyenv
-.python-version
-
-# celery beat schedule file
-celerybeat-schedule
-
-# dotenv
-.env
-
-# virtualenv
-venv/
-ENV/
-
-# Spyder project settings
-.spyderproject
-
-# Rope project settings
-.ropeproject
-=======
 # pyenv
 .python-version
 
@@ -449,4 +390,3 @@ $RECYCLE.BIN/
 
 # Ansible Collection tarball
 cisco-aci-*.tar.gz
->>>>>>> upstream/master

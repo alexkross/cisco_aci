@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-# cisco_aci
-
-https://github.com/alexkross/cisco_aci
-
-Cisco Application Centric Infrastructure (ACI) utility scripts and stuff
-========================================================================
-
-Note:
-	* this script location must be in the PATH,
-	* ensure that scripts have executable bit set.
-
-Content
--------
-
-See also descriptions at the head of each script.
-
-* aci-raw2pretty.sh - helps to convert raw bunch of JSON configuration backup into corresponding numered files in flat directory suitable for subsequent version control with GIT or Mercurial, etc.
-
-See also
---------
-
-https://github.com/alexkross/AIR - A real-time data stream classification and knowledge generation engine with no dependencies applied to Cisco ACI.
-=======
 # ansible-aci
 
 The ansible-aci project provides an Ansible collection for managing and automating your Cisco ACI environment. It consists of a set of modules and roles for performing tasks related to ACI.
@@ -113,4 +89,3 @@ ansible-galaxy collection install cisco-aci-1.0.0.tar.gz —-force
 Ongoing development efforts and contributions to this collection are tracked as issues in this repository.
 
 We welcome community contributions to this collection. If you find problems, need an enhancement or need a new module, please open an issue or create a PR against the [Cisco ACI collection repository](https://github.com/CiscoDevNet/ansible-aci/issues).
->>>>>>> upstream/master
